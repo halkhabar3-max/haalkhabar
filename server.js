@@ -27,9 +27,17 @@ function containsBadWords(text = "") {
 }
 
 /* ================= MONGODB ================= */
-mongoose.connect(process.env.MONGO_URL)
-  .then(() => console.log("MongoDB connected 🚀"))
-  .catch(err => console.log("MongoDB error ❌", err));
+mongoose.connect(MONGO_URI)
+  .then(() => {
+    console.log("MongoDB connected");
+
+    app.listen(3000, () => {
+      console.log("Server running");
+    });
+  })
+  .catch(err => {
+    console.log("DB error", err);
+  });
 
 /* ================= IMAGE UPLOAD ================= */
 const storage = multer.diskStorage({
