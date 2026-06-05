@@ -8,18 +8,18 @@ body {
 }
 .header{
     width: 100%;
-    height: 20vh;
+    height: 10vh;
     background-color: #f6f7f940;
     border-radius: 70px;
     display:flex;
 }
 .header img{
     height: 100%;
-    width: 10%;
+    width: 6%;
     border-radius: 50%;
 }
 .header .h1{
-    font-size:70px;
+    font-size:50px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     align-self: center;
 }
