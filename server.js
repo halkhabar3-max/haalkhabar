@@ -111,7 +111,7 @@ app.delete("/api/news/:id", async (req, res) => {
 });
 
 /* ================= AUTO DELETE ================= */
-const DELETE_AFTER_MS = 2 * 60 * 1000; // FIXED
+const DELETE_AFTER_MS = 12 * 60 *60* 1000; // FIXED
 
 async function deleteOldNews() {
   try {
