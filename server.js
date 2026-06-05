@@ -27,16 +27,16 @@ function containsBadWords(text = "") {
 }
 
 /* ================= MONGODB ================= */
-mongoose.connect(MONGO_URI)
+mongoose.connect(process.env.MONGO_URL)
   .then(() => {
-    console.log("MongoDB connected");
+    console.log("MongoDB connected 🚀");
 
     app.listen(3000, () => {
       console.log("Server running");
     });
   })
   .catch(err => {
-    console.log("DB error", err);
+    console.log("MongoDB error ❌", err);
   });
 
 /* ================= IMAGE UPLOAD ================= */
